@@ -55,6 +55,37 @@ body {
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
 .grid.two { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 
+.slider {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+.slider__track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(220px, 1fr);
+  gap: 12px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 6px;
+}
+.slider__track::-webkit-scrollbar { display: none; }
+.slider__track > .card { scroll-snap-align: start; min-width: 220px; }
+.slider__btn {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: border-color 0.2s ease, transform 0.15s ease;
+}
+.slider__btn:hover { border-color: var(--accent); transform: translateY(-1px); }
+
 .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
 .card h3 { margin: 0 0 4px; }
 .card .muted { color: var(--muted); margin: 0 0 12px; }
