@@ -23,7 +23,6 @@
           <div class="line"><span class="label">Current</span><span class="value">1,940,000 gp</span></div>
           <div class="line"><span class="label">24h avg</span><span class="value">1,915,500 gp</span></div>
           <div class="line"><span class="label">Signal</span><span class="badge warn">Watch</span></div>
-          <p class="hint">Signals consider moving averages and volatility to avoid spammy pings.</p>
         </div>
       </div>
     </div>
@@ -36,55 +35,51 @@
         <h2>What you can ask</h2>
         <p class="lede">Use the slash commands or prefix commands in your Discord server.</p>
       </div>
-      <div class="slider">
-        <button class="slider__btn" data-dir="-1" aria-label="Scroll commands left">⟵</button>
-        <div class="slider__track" id="commands-track">
-          <div class="card">
-            <h3>Players</h3>
-            <p class="muted">Hiscores + PvM highlights</p>
-            <code>!player zulu</code>
-            <ul class="list">
-              <li>Skills, boss KC, clues</li>
-              <li>Recent highs/lows</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Items</h3>
-            <p class="muted">GE price and signals</p>
-            <code>!osrsitem abyssal whip</code>
-            <ul class="list">
-              <li>Current/avg price</li>
-              <li>Signal: watch/buy/sell</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Bosses</h3>
-            <p class="muted">Mechanics and tips</p>
-            <code>!osrsboss vorkath</code>
-            <ul class="list">
-              <li>Gear & strategy</li>
-              <li>Notable drops</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Quests</h3>
-            <p class="muted">Requirements & rewards</p>
-            <code>!osrsquest dragon slayer</code>
-            <ul class="list">
-              <li>Skill/quest reqs</li>
-              <li>Items & rewards</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Feedback</h3>
-            <p class="muted">Send ideas from Discord</p>
-            <code>!osrsrecommend Add rune alerts</code>
-            <ul class="list">
-              <li>Logs to a review queue</li>
-            </ul>
-          </div>
+      <div class="grid cards">
+        <div class="card">
+          <h3>Players</h3>
+          <p class="muted">Hiscores + PvM highlights</p>
+          <code>!player zulu</code>
+          <ul class="list">
+            <li>Skills, boss KC, clues</li>
+            <li>Recent highs/lows</li>
+          </ul>
         </div>
-        <button class="slider__btn" data-dir="1" aria-label="Scroll commands right">⟶</button>
+        <div class="card">
+          <h3>Items</h3>
+          <p class="muted">GE price and signals</p>
+          <code>!osrsitem abyssal whip</code>
+          <ul class="list">
+            <li>Current/avg price</li>
+            <li>Signal: watch/buy/sell</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Bosses</h3>
+          <p class="muted">Mechanics and tips</p>
+          <code>!osrsboss vorkath</code>
+          <ul class="list">
+            <li>Gear & strategy</li>
+            <li>Notable drops</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Quests</h3>
+          <p class="muted">Requirements & rewards</p>
+          <code>!osrsquest dragon slayer</code>
+          <ul class="list">
+            <li>Skill/quest reqs</li>
+            <li>Items & rewards</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Feedback</h3>
+          <p class="muted">Send ideas from Discord</p>
+          <code>!osrsrecommend Add rune alerts</code>
+          <ul class="list">
+            <li>Logs to a review queue</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -111,16 +106,5 @@
     <p>RuneMan Bot · Old School RuneScape</p>
   </footer>
 
-  <script>
-    const track = document.getElementById('commands-track');
-    const buttons = document.querySelectorAll('.slider__btn');
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const dir = Number(btn.dataset.dir);
-        const scrollAmount = track.clientWidth * 0.7;
-        track.scrollBy({ left: dir * scrollAmount, behavior: 'smooth' });
-      });
-    });
-  </script>
 </body>
 </html>
