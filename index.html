@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RuneMan Bot</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">Discord Bot · Old School RuneScape</p>
+      <h1>RuneMan Bot</h1>
+      <p class="lede">Price signals, hiscores, boss insights, quest details, and feedback—delivered instantly in Discord.</p>
+      <div class="cta-row">
+        <a class="button primary" href="#commands">See Commands</a>
+        <a class="button ghost" href="https://github.com" target="_blank" rel="noreferrer">View Source</a>
+      </div>
+    </div>
+    <div class="hero__card">
+      <div class="card">
+        <div class="card__header">
+          <span class="pill">Example · Price Signal</span>
+        </div>
+        <div class="card__body">
+          <div class="line"><span class="label">Command</span><code>!osrsitem abyssal whip</code></div>
+          <div class="line"><span class="label">Current</span><span class="value">1,940,000 gp</span></div>
+          <div class="line"><span class="label">24h avg</span><span class="value">1,915,500 gp</span></div>
+          <div class="line"><span class="label">Signal</span><span class="badge warn">Watch</span></div>
+          <p class="hint">Signals consider moving averages and volatility to avoid spammy pings.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="commands" class="section">
+      <div class="section__header">
+        <p class="eyebrow">Slash & Prefix</p>
+        <h2>What you can ask</h2>
+        <p class="lede">Use the slash commands or prefix commands in your Discord server.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>Players</h3>
+          <p class="muted">Hiscores + PvM highlights</p>
+          <code>!player zulu</code>
+          <ul class="list">
+            <li>Skills, boss KC, clues</li>
+            <li>Recent highs/lows</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Items</h3>
+          <p class="muted">GE price and signals</p>
+          <code>!osrsitem abyssal whip</code>
+          <ul class="list">
+            <li>Current/avg price</li>
+            <li>Signal: watch/buy/sell</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Bosses</h3>
+          <p class="muted">Mechanics and tips</p>
+          <code>!osrsboss vorkath</code>
+          <ul class="list">
+            <li>Gear & strategy</li>
+            <li>Notable drops</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Quests</h3>
+          <p class="muted">Requirements & rewards</p>
+          <code>!osrsquest dragon slayer</code>
+          <ul class="list">
+            <li>Skill/quest reqs</li>
+            <li>Items & rewards</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Feedback</h3>
+          <p class="muted">Send ideas from Discord</p>
+          <code>!osrsrecommend Add rune alerts</code>
+          <ul class="list">
+            <li>Logs to a review queue</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="section__header">
+        <p class="eyebrow">How it helps</p>
+        <h2>Why teams use RuneMan</h2>
+        <p class="lede">Fast signals, low noise, all from Discord.</p>
+      </div>
+      <div class="grid two">
+        <div class="card">
+          <h3>Price signals tuned</h3>
+          <p class="muted">Moving averages and volatility gates to avoid spam.</p>
+        </div>
+        <div class="card">
+          <h3>Live wiki data</h3>
+          <p class="muted">Boss, quest, and item data kept current via polling.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>RuneMan Bot · Old School RuneScape</p>
+  </footer>
+</body>
+</html>
